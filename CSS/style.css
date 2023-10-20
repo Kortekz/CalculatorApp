@@ -1,3 +1,8 @@
+
+body{
+    background-color: rgb(119, 119, 119);
+}
+
 /* Styling for the entire calculator container */
 .calculator {
     border-radius: 10px;
@@ -13,7 +18,8 @@
 
 /* Styling for the calculator output display */
 .calculator__output {
-    background: hsl(255, 100%, 100%);
+    background: rgb(119, 119, 119);
+    color: white;
     font-size: 4.2rem;
     padding-block-start: 3rem;
     padding-block-end: 0.5rem;
@@ -27,24 +33,53 @@
     display: grid;
     grid-template-columns: repeat(4, 1fr);
     grid-gap: 1px;
-    background: hsl(255, 100%, 100%);
+    background: rgb(119, 119, 119);
     padding: 0.5rem;
 }
 
 /* Styling for individual calculator keys */
 .calculator__key {
-    background: transparent;
+    background: rgb(0, 0, 0);
     border: none;
     padding-block-start: 1rem;
     padding-block-end: 1rem;
     padding-inline-end: 1.25rem;
     padding-inline-start: 1.25rem;
+    color: white;
     font-size: 1.5rem;
     /* Playful Styles */
     inline-size: 70px;
     block-size: 70px;
     margin: 0.25rem;
     border-radius: 40px;
+    transition: all 0.3s;
+}
+.calculator__key:hover{
+    background: transparent;
+    border: 2px solid rgb(0, 0, 0);
+    
+}
+
+.calculator__keyClear {
+    background: rgb(63, 131, 36);
+    border: none;
+    padding-block-start: 1rem;
+    padding-block-end: 1rem;
+    padding-inline-end: 1.25rem;
+    padding-inline-start: 1.25rem;
+    color: white;
+    font-size: 1.5rem;
+    /* Playful Styles */
+    inline-size: 70px;
+    block-size: 70px;
+    margin: 0.25rem;
+    border-radius: 40px;
+    transition: all 0.3s;
+}
+.calculator__keyClear:hover{
+    background: transparent;
+    border: 2px solid rgb(63, 131, 36);
+    
 }
 
 /* Styling for active and focused calculator keys */
@@ -56,7 +91,12 @@
 
 /* Styling for operator keys */
 .calculator__key--operator {
-    background: hsl(208, 25%, 86%);
+    background: hsl(207, 100%, 23%);
+}
+
+.calculator__key--operator:hover{
+    background: transparent;
+    border: 2px solid hsl(207, 100%, 23%);
 }
 
 /* Styling for active operator keys */
@@ -71,4 +111,11 @@
     background: hsl(225, 100%, 50%);
     color: white;
     height: auto;
+}
+
+
+.calculator__key--enter:hover{
+    color: hsl(0, 0%, 100%);
+    background-color: transparent;
+    border: 2px solid hsl(225, 100%, 50%) ;
 }
