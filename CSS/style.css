@@ -57,7 +57,7 @@ body{
 .calculator__key:hover{
     background: transparent;
     border: 2px solid rgb(0, 0, 0);
-    
+    cursor: pointer;
 }
 
 .calculator__keyClear {
@@ -79,7 +79,7 @@ body{
 .calculator__keyClear:hover{
     background: transparent;
     border: 2px solid rgb(63, 131, 36);
-    
+    cursor: pointer;
 }
 
 /* Styling for active and focused calculator keys */
@@ -97,6 +97,7 @@ body{
 .calculator__key--operator:hover{
     background: transparent;
     border: 2px solid hsl(207, 100%, 23%);
+    cursor: pointer;
 }
 
 /* Styling for active operator keys */
@@ -118,4 +119,5 @@ body{
     color: hsl(0, 0%, 100%);
     background-color: transparent;
     border: 2px solid hsl(225, 100%, 50%) ;
+    cursor: pointer;
 }
