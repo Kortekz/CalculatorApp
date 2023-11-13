@@ -1,24 +1,31 @@
 
 body{
     background-color: rgb(119, 119, 119);
+    padding-top: 20px;
 }
-
+:root {
+    --background-color: rgb(119, 119, 119);
+    --orange: rgb(252, 116, 5);
+    --dark-gray: rgb(31, 31, 31);
+    --blue: hsl(225, 100%, 50%);
+}
 /* Styling for the entire calculator container */
 .calculator {
     border-radius: 10px;
-    box-shadow: 0px 3px 6px 0px rgba(0, 0, 0, 0.15), 0px 2px 4px 0px rgba(0, 0, 0, 0.12);
+    box-shadow: 0px 2px 4px 0px white, 0px 0px 4px 2px white;
     margin-inline-start: auto;
     margin-inline-end: auto;
     margin-block-start: 2em;
-    max-inline-size: 22rem;
+    max-inline-size: 28rem;
     overflow: hidden;
-    color: hsl(202, 11%, 29%);
-    padding: 20px;
+    color: white;
+    padding: 30px;
+    padding-right: 55px;
 }
-
 /* Styling for the calculator output display */
 .calculator__output {
     background: rgb(119, 119, 119);
+    height: 80px;
     color: white;
     font-size: 4.2rem;
     padding-block-start: 3rem;
@@ -27,41 +34,39 @@ body{
     text-align: end;
     font-family: monospace;
 }
-
 /* Styling for the calculator keys container */
 .calculator__keys {
     display: grid;
     grid-template-columns: repeat(4, 1fr);
-    grid-gap: 1px;
+    grid-gap: 8px;
     background: rgb(119, 119, 119);
     padding: 0.5rem;
 }
-
 /* Styling for individual calculator keys */
 .calculator__key {
-    background: rgb(0, 0, 0);
+    background: rgb(31, 31, 31);
     border: none;
     padding-block-start: 1rem;
     padding-block-end: 1rem;
     padding-inline-end: 1.25rem;
     padding-inline-start: 1.25rem;
     color: white;
-    font-size: 1.5rem;
+    font-size: 2rem;
     /* Playful Styles */
-    inline-size: 70px;
+    inline-size: 100px;
     block-size: 70px;
     margin: 0.25rem;
     border-radius: 40px;
     transition: all 0.3s;
+    padding: 20px;
 }
 .calculator__key:hover{
     background: transparent;
-    border: 2px solid rgb(0, 0, 0);
+    border: 2px solid var(--dark-gray);
     cursor: pointer;
 }
-
 .calculator__keyClear {
-    background: rgb(63, 131, 36);
+    background: var(--orange);
     border: none;
     padding-block-start: 1rem;
     padding-block-end: 1rem;
@@ -70,7 +75,7 @@ body{
     color: white;
     font-size: 1.5rem;
     /* Playful Styles */
-    inline-size: 70px;
+    inline-size: 100px;
     block-size: 70px;
     margin: 0.25rem;
     border-radius: 40px;
@@ -78,46 +83,39 @@ body{
 }
 .calculator__keyClear:hover{
     background: transparent;
-    border: 2px solid rgb(63, 131, 36);
+    border: 2px solid var(--orange);
     cursor: pointer;
 }
-
 /* Styling for active and focused calculator keys */
 .calculator__key:active,
 .calculator__key:focus {
     box-shadow: 0 0 8px 0 rgba(0, 0, 0, 0.3) inset;
     outline: none;
 }
-
 /* Styling for operator keys */
 .calculator__key--operator {
-    background: hsl(207, 100%, 23%);
+    background: var(--orange);
 }
-
 .calculator__key--operator:hover{
     background: transparent;
-    border: 2px solid hsl(207, 100%, 23%);
+    border: 2px solid var(--orange);
     cursor: pointer;
 }
-
 /* Styling for active operator keys */
 .calculator__key--operator:active {
-    background: hsl(208, 24%, 80%);
+    background: var(--orange);
 }
-
 /* Styling for the "Enter" key */
 .calculator__key--enter {
     grid-column: 4 / 5;
     grid-row: 2 / span 4;
-    background: hsl(225, 100%, 50%);
+    background: var(--blue);
     color: white;
     height: auto;
 }
-
-
 .calculator__key--enter:hover{
     color: hsl(0, 0%, 100%);
     background-color: transparent;
-    border: 2px solid hsl(225, 100%, 50%) ;
+    border: 2px solid var(--blue) ;
     cursor: pointer;
 }
